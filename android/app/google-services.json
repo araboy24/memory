@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "27004007823",
+    "project_id": "memory-45087",
+    "storage_bucket": "memory-45087.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27004007823:android:1efb20008eab1dd97407fa",
+        "android_client_info": {
+          "package_name": "ezcoding.memory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "27004007823-9m1gtuq1gus4q4aek2a3tqsarnrq5npc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF3F1QOhBP4YOrlOGa1uWkH0WMMAzjSfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "27004007823-9m1gtuq1gus4q4aek2a3tqsarnrq5npc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "27004007823-3679tovms11kjc70510n500vh4e0kv3p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ezcoding.memory"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
