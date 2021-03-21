@@ -55,107 +55,148 @@ class _WelcomeState extends State<Welcome> {
                     ),
                   ),
                   SizedBox(height: 24,),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                    decoration: authButtonDecoration,
-                    child: Row(
-                      children: [
-                        Expanded(
-                          flex: 1,
-                          child: Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.all(8),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Image.asset('assets/images/googleIcon.png',
-                              height: 30, width: 30,
-                              ),
-                            ),
-                  ),
-                        ),
-                        Expanded(
-                          flex: 2,
-                          child: Container(
-                            child: Text('Continue with Google',
+                  GestureDetector(
+                    onTap: () {
 
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                    decoration: authButtonDecoration,
-                    child: Row(
-                      children: [
-                        Expanded(
-                          flex: 1,
-                          child: Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.all(8),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Image.asset('assets/images/appleLogo.png',
+                    },
+                    child: Container(
+                      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      decoration: authButtonDecoration,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              alignment: Alignment.centerLeft,
+                              margin: EdgeInsets.all(8),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Image.asset('assets/images/googleIcon.png',
                                 height: 30, width: 30,
+                                ),
                               ),
-                            ),
+                    ),
                           ),
-                        ),
-                        Expanded(
-                          flex: 2,
-                          child: Container(
-                            child: Text('Continue with Apple',
+                          Expanded(
+                            flex: 2,
+                            child: Container(
+                              child: Text('Continue with Google',
 
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                    decoration: authButtonDecoration,
-                    child: Row(
-                      children: [
-                        Expanded(
-                          flex: 1,
-                          child: Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.all(8),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(Icons.mail,
-                                color: Colors.white,
-                                size: 30,),
+                  GestureDetector(
+                    onTap: () {
+
+                    },
+                    child: Container(
+                      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      decoration: authButtonDecoration,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              alignment: Alignment.centerLeft,
+                              margin: EdgeInsets.all(8),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Image.asset('assets/images/appleLogo.png',
+                                  height: 30, width: 30,
+                                ),
                               ),
                             ),
                           ),
+                          Expanded(
+                            flex: 2,
+                            child: Container(
+                              child: Text('Continue with Apple',
 
-                        // ),
-                        Expanded(
-                          flex: 2,
-                          child: Container(
-                            child: Text('Continue with Email',
-
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
+
+                  GestureDetector(
+                    onTap: () {
+
+                    },
+                    child: Container(
+                      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      decoration: authButtonDecoration,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              alignment: Alignment.centerLeft,
+                              margin: EdgeInsets.all(8),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Icon(Icons.mail,
+                                  color: Colors.white,
+                                  size: 30,),
+                                ),
+                              ),
+                            ),
+
+                          // ),
+                          Expanded(
+                            flex: 2,
+                            child: Container(
+                              child: Text('Continue with Email',
+
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 12,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Already a user? ',
+                        style: TextStyle(
+                          // decoration: TextDecoration.underline,
+                          color: Colors.white,
+                          // fontSize:
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+
+                        },
+                        child: Text('Log In',
+                        style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          color: Colors.white,
+                          // fontSize:
+                        ),
+                        ),
+                      ),
+                    ],
+                  )
                 ],
               )
             ),
