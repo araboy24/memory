@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:memory/shared/constants.dart';
+import 'package:memory/views/authenticate/sign_in.dart';
 
 class Welcome extends StatefulWidget {
   @override
@@ -131,7 +132,6 @@ class _WelcomeState extends State<Welcome> {
                       ),
                     ),
                   ),
-
                   GestureDetector(
                     onTap: () {
 
@@ -185,7 +185,10 @@ class _WelcomeState extends State<Welcome> {
                       ),
                       GestureDetector(
                         onTap: () {
-
+                          Navigator.push(context,
+                              MaterialPageRoute(
+                                builder: (BuildContext context) => SignIn(),
+                              ));
                         },
                         child: Text('Log In',
                         style: TextStyle(

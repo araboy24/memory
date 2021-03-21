@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:memory/views/authenticate/sign_in.dart';
 import 'package:memory/views/authenticate/welcome.dart';
 
 void main() {
