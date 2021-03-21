@@ -151,41 +151,54 @@ class _SignInState extends State<SignIn> {
                 ],
             ),
             SizedBox(height: 8,),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              child: TextFormField(
-                decoration: lightTextFormDecoration.copyWith(hintText: '  Email'),
-                onTap: () {
+            Form(
+              key: _formKey,
+              child: Column(
+                children: [
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  child: TextFormField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  decoration: lightTextFormDecoration.copyWith(hintText: '  Email'),
+                  onTap: () {
 
-                },
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              child: TextFormField(
-                decoration: lightTextFormDecoration.copyWith(hintText: '  Password'),
-                onTap: () {
+                  },
+                ),
+                ),
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  child: TextFormField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    decoration: lightTextFormDecoration.copyWith(hintText: '  Password'),
+                    onTap: () {
 
-                },
+                    },
+                  ),
+                ),
+                Spacer(),
+                Container(
+                  padding: EdgeInsets.all(16),
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  decoration: BoxDecoration(
+                      color: Colors.orange,
+                      borderRadius: BorderRadius.circular(36)
+                  ),
+                  child: Text('Continue',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
+                  ),
+                ),
+                SizedBox(height: 24,),
+      ],
               ),
             ),
-            Spacer(),
-            Container(
-              padding: EdgeInsets.all(16),
-              alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              decoration: BoxDecoration(
-                  color: Colors.orange,
-                  borderRadius: BorderRadius.circular(36)
-              ),
-              child: Text('Continue',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.white,
-              ),
-              ),
-            ),
-            SizedBox(height: 24,),
           ],
         ),
       ),

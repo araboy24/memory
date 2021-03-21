@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:memory/services/auth.dart';
 import 'package:memory/shared/constants.dart';
 import 'package:memory/views/authenticate/sign_in.dart';
+import 'package:memory/views/authenticate/sign_up.dart';
 
 class Welcome extends StatefulWidget {
   @override
@@ -8,9 +10,15 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
+  final AuthService _auth = AuthService();
+
+  bool loading = false;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ?
+    Container()
+    : Scaffold(
       body: Container (
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
@@ -57,8 +65,14 @@ class _WelcomeState extends State<Welcome> {
                   ),
                   SizedBox(height: 24,),
                   GestureDetector(
-                    onTap: () {
-
+                    onTap: () async {
+                      dynamic result = await _auth.googleSignIn();
+                      if (result == null) {
+                        setState(() {
+                          // error = 'Please supply a valid email address.';
+                          loading = false;
+                        });
+                      }
                     },
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -134,7 +148,10 @@ class _WelcomeState extends State<Welcome> {
                   ),
                   GestureDetector(
                     onTap: () {
-
+                      Navigator.push(context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => SignUp(),
+                          ));
                     },
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
