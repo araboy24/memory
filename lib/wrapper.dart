@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:memory/home.dart';
 import 'package:memory/views/authenticate/welcome.dart';
+import 'package:memory/views/authenticate/welcome_or_auth.dart';
 import 'package:provider/provider.dart';
 import 'package:memory/models/user.dart';
 
@@ -9,10 +10,10 @@ class Wrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     final user = Provider.of<User>(context);
     if (user == null){
-      print('user == null');
-      return Welcome();
+      // print('user == null');
+      return WelcomeOrAuth();
     } else {
-      print('user != null');
+      // print('user != null');
       return Home();
     }
   }

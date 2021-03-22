@@ -6,6 +6,9 @@ import 'package:memory/views/authenticate/welcome.dart';
 import 'package:memory/wrapper.dart';
 import 'package:provider/provider.dart';
 import 'package:memory/models/user.dart';
+import 'package:flutter/cupertino.dart';
+
+import 'home.dart';
 
 void main() {
   runApp(
@@ -31,10 +34,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        cupertinoOverrideTheme: CupertinoThemeData(
+          primaryColor: Colors.white,
+        ),
+        cursorColor: Colors.white,
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Wrapper()
+      // home: Wrapper()
+        initialRoute: '/',
+        routes: {
+          '/': (context) => Wrapper(),
+          '/home': (context) => Home(),
+        },
       ),
     );
   }

@@ -50,8 +50,6 @@ class AuthService {
     }
   }
 
-  // This app isn't as great as I thought
-
   //register with email and password
   Future registerWithEmailAndPassword(String email, String password) async {
     try {
@@ -127,7 +125,7 @@ class AuthService {
 
   //sign out
   Future signOut() async {
-    print('Sign out called');
+    // print('Sign out called');
     try {
       return await _auth.signOut();
     } catch (e) {

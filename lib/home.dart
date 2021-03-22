@@ -9,11 +9,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
     final user = Provider.of<User>(context);
-    final AuthService _auth = AuthService();
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,

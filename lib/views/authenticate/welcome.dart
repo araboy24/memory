@@ -5,6 +5,8 @@ import 'package:memory/views/authenticate/sign_in.dart';
 import 'package:memory/views/authenticate/sign_up.dart';
 
 class Welcome extends StatefulWidget {
+  final Function toggleView;
+  Welcome({this.toggleView});
   @override
   _WelcomeState createState() => _WelcomeState();
 }
@@ -148,10 +150,11 @@ class _WelcomeState extends State<Welcome> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(
-                            builder: (BuildContext context) => SignUp(),
-                          ));
+                      widget.toggleView('signUp');
+                      // Navigator.push(context,
+                      //     MaterialPageRoute(
+                      //       builder: (BuildContext context) => SignUp(),
+                      //     ));
                     },
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -202,10 +205,11 @@ class _WelcomeState extends State<Welcome> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => SignIn(),
-                              ));
+                          widget.toggleView('signIn');
+                          // Navigator.push(context,
+                          //     MaterialPageRoute(
+                          //       builder: (BuildContext context) => SignIn(),
+                          //     ));
                         },
                         child: Text('Log In',
                         style: TextStyle(

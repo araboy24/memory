@@ -14,7 +14,7 @@ var lightTextFormDecoration = InputDecoration(
   fillColor: Color(0xff9092BF),
   filled: true,
   hintStyle: TextStyle(color: Colors.white),
-
+  contentPadding: EdgeInsets.only(left : 24.0),
   enabledBorder: OutlineInputBorder(
     //borderSide: BorderSide(color: Colors.white, width: 2),
     borderRadius: BorderRadius.circular(36),
@@ -23,4 +23,7 @@ var lightTextFormDecoration = InputDecoration(
     // borderSide: BorderSide(color: Colors.lightBlue, width: 2),
     borderRadius: BorderRadius.circular(36),
   ),
+  errorBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(36),
+  )
 );

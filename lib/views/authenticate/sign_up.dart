@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:memory/services/auth.dart';
 import 'package:memory/shared/constants.dart';
 import 'package:memory/shared/loading.dart';
+import 'package:provider/provider.dart';
+import 'package:memory/models/user.dart';
+
+import '../../home.dart';
 
 class SignUp extends StatefulWidget {
+  final Function toggleView;
+  SignUp({this.toggleView});
+
   @override
   _SignUpState createState() => _SignUpState();
 }
@@ -21,8 +28,9 @@ class _SignUpState extends State<SignUp> {
 
   @override
   Widget build(BuildContext context) {
-    return loading ?
-        Loading() :
+    // final user = Provider.of<User>(context);
+    // return (user == null) ?
+    return loading ? Loading() :
     Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -69,7 +77,7 @@ class _SignUpState extends State<SignUp> {
                   style: TextStyle(
                     color: Colors.white,
                   ),
-                  decoration: lightTextFormDecoration.copyWith(hintText: '  Email'),
+                  decoration: lightTextFormDecoration.copyWith(hintText: 'Email'),
                   validator: (val) =>
                   //TODO: Check for valid email with RegExp
                   val.isEmpty ? 'Enter a valid email' : null,
@@ -86,7 +94,7 @@ class _SignUpState extends State<SignUp> {
                   style: TextStyle(
                     color: Colors.white,
                   ),
-                  decoration: lightTextFormDecoration.copyWith(hintText: '  Password'),
+                  decoration: lightTextFormDecoration.copyWith(hintText: 'Password'),
                   validator: (val) => val.length < 6
                       ? 'Enter a Password 6+ Characters Long'
                       : null,
@@ -104,7 +112,7 @@ class _SignUpState extends State<SignUp> {
                   style: TextStyle(
                     color: Colors.white,
                   ),
-                  decoration: lightTextFormDecoration.copyWith(hintText: ' Confirm Password'),
+                  decoration: lightTextFormDecoration.copyWith(hintText: 'Confirm Password'),
                   validator: (val) =>
                   val != password ? "Passwords Don't Match" : null,
                   obscureText: true,
@@ -129,6 +137,8 @@ class _SignUpState extends State<SignUp> {
                         error = 'Please supply a valid email address.';
                         loading = false;
                       });
+                    } else{
+                      print('Log in should be successful');
                     }
                   }
                 },
@@ -153,6 +163,7 @@ class _SignUpState extends State<SignUp> {
           ),
         ),
       ),
-    );
+    ); //: Home();
   }
 }
+//TODO CANT NAVIGATE FROM WELCOME BECASUE WRAPPER GOES AWAY SO IT WON"T SWITCH TO HOME
