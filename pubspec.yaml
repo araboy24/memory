@@ -61,7 +61,7 @@ dev_dependencies:
 #  image_path: "assets/datum-icon.png"
 
 flutter_launcher_name:
-  name: "Datum"
+  name: "Memory"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

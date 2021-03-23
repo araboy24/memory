@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:memory/services/auth.dart';
 import 'package:memory/shared/constants.dart';
 import 'package:memory/shared/loading.dart';
+import 'package:memory/views/authenticate/forgotPassword.dart';
 import 'package:provider/provider.dart';
 import 'package:memory/models/user.dart';
 
@@ -38,7 +39,8 @@ class _SignInState extends State<SignIn> {
         style: TextStyle(
           color: Colors.white,
           fontSize: 30
-        ),),
+        ),
+        ),
       ),
       body: Container(
         // #111440
@@ -87,7 +89,7 @@ class _SignInState extends State<SignIn> {
                             margin: EdgeInsets.all(8),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Image.asset('assets/images/googleIcon.png',
+                              child: Image.asset('assets/images/googleIconWhite.png',
                                 height: 30, width: 30,
                               ),
                             ),
@@ -202,6 +204,40 @@ class _SignInState extends State<SignIn> {
                         password = val;
                       });
                     },
+                  ),
+                ),
+                SizedBox(height: 8),
+                Container(
+                  width: MediaQuery.of(context).size.width * .85,
+                  alignment: Alignment.centerRight,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text('Forgot your password? ',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                      ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(
+                                builder: (BuildContext context) => ForgotPassword(),
+                              ));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Tap Here',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              decoration: TextDecoration.underline
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Spacer(),

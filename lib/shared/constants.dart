@@ -27,3 +27,21 @@ var lightTextFormDecoration = InputDecoration(
     borderRadius: BorderRadius.circular(36),
   )
 );
+
+var orangeBg =  BoxDecoration(
+  gradient: LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      const Color(0xffFFA00E),
+      const Color(0xffFE7F1C),
+    ],
+  ),
+);
+
+
+var bigWhiteText = TextStyle(
+    color: Colors.white,
+    fontSize: 40,
+    fontWeight: FontWeight.w700
+);
