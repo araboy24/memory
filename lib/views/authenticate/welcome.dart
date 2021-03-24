@@ -4,6 +4,7 @@ import 'package:memory/shared/constants.dart';
 import 'package:memory/views/authenticate/sign_in.dart';
 import 'package:memory/views/authenticate/sign_up.dart';
 import 'package:memory/views/enableSettings/enable_contacts.dart';
+import 'package:memory/views/enableSettings/enable_music.dart';
 import 'package:memory/views/enableSettings/enable_notifications.dart';
 
 class Welcome extends StatefulWidget {
@@ -116,7 +117,7 @@ class _WelcomeState extends State<Welcome> {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(
-                            builder: (BuildContext context) => EnableNotifications(),
+                            builder: (BuildContext context) => EnableMusic(),
                           ));
                     },
                     child: Container(
