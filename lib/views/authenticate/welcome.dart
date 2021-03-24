@@ -3,6 +3,7 @@ import 'package:memory/services/auth.dart';
 import 'package:memory/shared/constants.dart';
 import 'package:memory/views/authenticate/sign_in.dart';
 import 'package:memory/views/authenticate/sign_up.dart';
+import 'package:memory/views/enableSettings/enable_contacts.dart';
 import 'package:memory/views/enableSettings/enable_notifications.dart';
 
 class Welcome extends StatefulWidget {
@@ -113,10 +114,10 @@ class _WelcomeState extends State<Welcome> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(
-                      //       builder: (BuildContext context) => EnableNotifications(),
-                      //     ));
+                      Navigator.push(context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => EnableNotifications(),
+                          ));
                     },
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),

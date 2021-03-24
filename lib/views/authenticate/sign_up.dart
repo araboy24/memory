@@ -123,6 +123,37 @@ class _SignUpState extends State<SignUp> {
                   },
                 ),
               ),
+              SizedBox(height: 14,),
+              Container(
+                width: MediaQuery.of(context).size.width * .85,
+                alignment: Alignment.centerRight,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text('Already have an account? ',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        widget.toggleView('signIn');
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text('Tap Here',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              decoration: TextDecoration.underline
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               Spacer(),
               GestureDetector(
                 onTap: () async {

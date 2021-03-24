@@ -56,6 +56,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 margin: EdgeInsets.symmetric(horizontal: 16),
                 //width: MediaQuery.of(context).size.width * .9,
                 child: TextFormField(
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                     decoration: lightTextFormDecoration.copyWith(hintText: 'Email'),
                   validator: (val) =>
                   val.isEmpty ? 'Enter an Email' : null,
@@ -95,7 +98,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   alignment: Alignment.center,
                   margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(
-                      color: Colors.orange,
+                      color: Color(0xff727CE5),
                       borderRadius: BorderRadius.circular(36)
                   ),
                   child: Text('Reset Password',

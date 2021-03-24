@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 var authButtonDecoration = BoxDecoration(
-  color: Colors.black38,
+    color: Color(0xffd05E01),
   borderRadius: BorderRadius.circular(36)
 );
 
