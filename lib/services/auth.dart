@@ -8,7 +8,10 @@ import 'package:firebase_core/firebase_core.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final GoogleSignIn _googleSignIn = GoogleSignIn(
+    hostedDomain: "",
+    clientId: "",
+  );
 
   // create user object based on fb user
   User _userFromFirebaseUser(FirebaseUser user) {

@@ -14,14 +14,17 @@ class Loading extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              const Color(0xffFFA00E),
-              const Color(0xffFE7F1C),
+              // const Color(0xffFFA00E),
+              // const Color(0xffFE7F1C),
+              const Color(0xff111440),
+              const Color(0xff2D2E4A),
             ],
           ),
         ),
         child: Center(
           child: SpinKitRipple(
-            color: Colors.orange[200],
+            // color: Colors.orange[200],
+            color: Colors.blueGrey[200],
             size: 100.0,
           ),
         ),

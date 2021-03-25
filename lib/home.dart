@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:memory/services/auth.dart';
+import 'package:memory/views/activity.dart';
 import 'package:provider/provider.dart';
 import 'package:memory/models/user.dart';
 
@@ -17,10 +18,11 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text('DATUM', style: TextStyle(
+        elevation: 0,
+        backgroundColor: Color(0xff111440),
+        title: Text('Memory', style: TextStyle(
           fontSize: 35,
-          color: Colors.blue[200],
+          color: Colors.white,//indigo[400],
         ),
         ),
         actions: [
@@ -36,6 +38,19 @@ class _HomeState extends State<Home> {
         ],
       ),
       body: Container(
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              // const Color(0xffFFA00E),
+              // const Color(0xffFE7F1C),
+              const Color(0xff111440),
+              const Color(0xff2D2E4A),
+            ],
+          ),
+        ),
         child: Column(
           children: [
             ElevatedButton(onPressed: () async { await _auth.signOut();} , child: Text('SignOut')),
@@ -53,7 +68,19 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => Activity(),
+                    ));
+              },
+              child: Container(
+                color: Colors.blueGrey,
+                  padding: EdgeInsets.all(12),
+                  child: Text('Go to Activity'),
+              ),
+            )
           ],
         ),
       ),
