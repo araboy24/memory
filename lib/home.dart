@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:memory/services/auth.dart';
 import 'package:memory/views/activity.dart';
+import 'package:memory/views/profile.dart';
 import 'package:provider/provider.dart';
 import 'package:memory/models/user.dart';
 
@@ -31,7 +32,7 @@ class _HomeState extends State<Home> {
           },
             icon: Icon(
               Icons.logout,
-              color: Colors.blue[200],
+              color: Colors.white,
             ),
             label: Text(''),
           ),
@@ -80,7 +81,20 @@ class _HomeState extends State<Home> {
                   padding: EdgeInsets.all(12),
                   child: Text('Go to Activity'),
               ),
-            )
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => Profile(),
+                    ));
+              },
+              child: Container(
+                color: Colors.blueGrey,
+                padding: EdgeInsets.all(12),
+                child: Text('Go to Profile'),
+              ),
+            ),
           ],
         ),
       ),

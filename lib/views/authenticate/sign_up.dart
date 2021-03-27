@@ -169,7 +169,7 @@ class _SignUpState extends State<SignUp> {
                         loading = false;
                       });
                     } else{
-                      print('Log in should be successful');
+                      // print('Log in should be successful');
                     }
                   }
                 },
@@ -197,4 +197,3 @@ class _SignUpState extends State<SignUp> {
     ); //: Home();
   }
 }
-//TODO CANT NAVIGATE FROM WELCOME BECASUE WRAPPER GOES AWAY SO IT WON"T SWITCH TO HOME

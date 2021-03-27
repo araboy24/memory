@@ -25,7 +25,31 @@ var lightTextFormDecoration = InputDecoration(
   ),
   errorBorder: OutlineInputBorder(
     borderRadius: BorderRadius.circular(36),
-  )
+  ),
+  focusedErrorBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(36),
+  ),
+);
+
+var profileTextFormDecoration = InputDecoration(
+    fillColor: Color(0xff9092BF),
+    filled: true,
+    hintStyle: TextStyle(color: Colors.white),
+    contentPadding: EdgeInsets.symmetric(horizontal : 16.0),
+    enabledBorder: OutlineInputBorder(
+      //borderSide: BorderSide(color: Colors.white, width: 2),
+      borderRadius: BorderRadius.circular(12),
+    ),
+    focusedBorder: OutlineInputBorder(
+      // borderSide: BorderSide(color: Colors.lightBlue, width: 2),
+      borderRadius: BorderRadius.circular(12),
+    ),
+    errorBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+    ),
+    focusedErrorBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+    ),
 );
 
 var orangeBg =  BoxDecoration(

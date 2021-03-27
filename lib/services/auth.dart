@@ -3,6 +3,7 @@ import 'package:memory/models/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:memory/services/database.dart';
 
 // import 'database.dart';
 
@@ -60,7 +61,7 @@ class AuthService {
           email: email, password: password);
       FirebaseUser user = result.user;
 
-      // await DatabaseService(uid: user.uid).initUserData();
+      await DatabaseService(uid: user.uid).initNewUserData();
       // await DatabaseService(uid: user.uid).initUserLevels();
 
       return _userFromFirebaseUser(user);
