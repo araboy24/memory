@@ -6,6 +6,12 @@ class DatabaseService{
 
   final CollectionReference usersCollection = Firestore.instance.collection('users');
 
-
+    // Future initNewUserData() async {
+    //   return await usersCollection.document(uid).collection("profile").document.setData(
+    //     {
+    //       "a":"a"
+    //     }
+    //   );
+    // }
 
 }

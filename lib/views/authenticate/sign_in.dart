@@ -73,8 +73,14 @@ class _SignInState extends State<SignIn> {
                 ),
                 SizedBox(height: 8,),
                 GestureDetector(
-                  onTap: () {
-
+                  onTap: () async {
+                    dynamic result = await _auth.googleSignIn();
+                    if (result == null) {
+                      setState(() {
+                        // error = 'Please supply a valid email address.';
+                        loading = false;
+                      });
+                    }
                   },
                   child: Container(
                     margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
