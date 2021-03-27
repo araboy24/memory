@@ -16,3 +16,15 @@ class UserData {
   UserData({this.uid});
 }
 
+class UserProfile {
+  // final String uid;
+  final String firstName;
+  final String lastName;
+  final String userName;
+  final String email;
+  final String dob;
+
+  UserProfile({this.firstName, this.lastName,
+  this.userName, this.email, this.dob});
+}
+

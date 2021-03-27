@@ -14,6 +14,7 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
+
         Provider<User>(
           create: (context) => User(),
         ),

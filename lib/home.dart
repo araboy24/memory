@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:memory/services/auth.dart';
 import 'package:memory/views/activity.dart';
-import 'package:memory/views/profile.dart';
+import 'package:memory/views/profile/profile.dart';
 import 'package:provider/provider.dart';
 import 'package:memory/models/user.dart';
 

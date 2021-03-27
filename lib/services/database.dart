@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:memory/models/user.dart';
 
 class DatabaseService{
   final String uid;
@@ -57,5 +58,19 @@ class DatabaseService{
       return await usersCollection.document(uid).collection("profile").document(uid).updateData(updatedMap);
   }
 
+  UserProfile _userProfileFromSnapshot(DocumentSnapshot snaphot){
+      return UserProfile(
+        firstName: snaphot.data['firstName'] ?? '',
+        lastName: snaphot.data['lastName'] ?? '',
+        email: snaphot.data['email'] ?? '',
+        userName: snaphot.data['userName'] ?? '',
+        dob: snaphot.data['dob'] ?? '',
+      );
+  }
+
+  Stream<UserProfile> get userProfile {
+      return usersCollection.document(uid).collection('profile').document(uid)
+    .snapshots().map(_userProfileFromSnapshot);
+  }
 
 }
