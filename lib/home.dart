@@ -27,14 +27,65 @@ class _HomeState extends State<Home> {
         ),
         ),
         actions: [
-          FlatButton.icon(onPressed: () async {
-            await _auth.signOut();
-          },
-            icon: Icon(
-              Icons.logout,
-              color: Colors.white,
-            ),
-            label: Text(''),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+
+              // FlatButton.icon(onPressed: () async {
+              //   Navigator.push(context,
+              //       MaterialPageRoute(
+              //         builder: (BuildContext context) => Profile(),
+              //       ));
+              // },
+              //   icon: Icon(
+              //     Icons.account_circle_sharp,
+              //     color: Colors.white,
+              //   ),
+              //   label: Text(''),
+              // ),
+              // GestureDetector(
+              //   onTap: (){
+              //     Navigator.push(context,
+              //               MaterialPageRoute(
+              //                 builder: (BuildContext context) => Profile(),
+              //               ));
+              //   },
+              //   child: Icon(
+              //         Icons.account_circle_sharp,
+              //         color: Colors.white,
+              //       ),
+              // ),
+              IconButton(
+                  icon: Icon(
+                      Icons.account_circle_sharp,
+                    color: Colors.white,),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => Profile(),
+                        ));
+                  },
+              ),
+              IconButton(
+                icon: Icon(
+                  Icons.logout,
+                  color: Colors.white,
+                ),
+                onPressed: () async {
+                  await _auth.signOut();
+                },
+              ),
+              // FlatButton.icon(
+              //   onPressed: () async {
+              //   await _auth.signOut();
+              // },
+              //   icon: Icon(
+              //     Icons.logout,
+              //     color: Colors.white,
+              //   ),
+              //   label: Text(''),
+              // ),
+            ],
           ),
         ],
       ),
@@ -54,21 +105,21 @@ class _HomeState extends State<Home> {
         ),
         child: Column(
           children: [
-            ElevatedButton(onPressed: () async { await _auth.signOut();} , child: Text('SignOut')),
-            GestureDetector(
-              onTap: () async {
-                setState(() async {
-                  await _auth.signOut();
-                });
-
-              },
-              child: Container(
-                color: Colors.red,
-                child: Text(
-                  'Home'
-                ),
-              ),
-            ),
+            // ElevatedButton(onPressed: () async { await _auth.signOut();} , child: Text('SignOut')),
+            // GestureDetector(
+            //   onTap: () async {
+            //     setState(() async {
+            //       await _auth.signOut();
+            //     });
+            //
+            //   },
+            //   child: Container(
+            //     color: Colors.red,
+            //     child: Text(
+            //       'Home'
+            //     ),
+            //   ),
+            // ),
             GestureDetector(
               onTap: () {
                 Navigator.push(context,
@@ -82,6 +133,7 @@ class _HomeState extends State<Home> {
                   child: Text('Go to Activity'),
               ),
             ),
+            SizedBox(height: 12,),
             GestureDetector(
               onTap: () {
                 Navigator.push(context,

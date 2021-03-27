@@ -40,16 +40,28 @@ class _ProfileState extends State<Profile> {
             ),
           ),
           actions: [
-            FlatButton.icon(onPressed: () async {
-              setState(() {
-                isEditMode = !isEditMode;
-              });
-            },
-              icon: Icon(
-                Icons.edit,
-                color: Colors.white,
+            Container(
+              margin: EdgeInsets.only(right: 8),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: Colors.white12,
+                borderRadius: BorderRadius.circular(24)
               ),
-              label: Text(''),
+              
+              child: FlatButton.icon(onPressed: () async {
+                setState(() {
+                  isEditMode = !isEditMode;
+                });
+              },
+                icon: Icon(
+                  Icons.edit,
+                  color: Colors.white,
+                ),
+                label: Text('Edit',
+                style: TextStyle(
+                  color: Colors.white
+                ),),
+              ),
             ),
           ],
         ),
@@ -329,45 +341,45 @@ class _ProfileState extends State<Profile> {
           ),
         ),
         child:
-          ProfileInfoList(),
-        // Column(
-        //   // crossAxisAlignment: CrossAxisAlignment.center,
-        //   children: [
-        //     Container(
-        //       width: 120,
-        //       height: 120,
-        //       decoration: BoxDecoration(
-        //         shape: BoxShape.circle,
-        //         image: DecorationImage(
-        //             image: NetworkImage('https://cdn2.iconfinder.com/data'
-        //                 '/icons/social-flat-buttons-3/512/anonymous-512.png'),
-        //             fit: BoxFit.fill
-        //         ),
-        //       ),
-        //     ),
-        //     Container(
-        //       width: MediaQuery.of(context).size.width,
-        //       margin: EdgeInsets.all(16),
-        //       child: Row(
-        //         children: [
-        //           Text('First Name: ',
-        //             style: TextStyle(
-        //                 color: Colors.white,
-        //                 fontSize: 18
-        //             ),
-        //           ),
-        //
-        //           Text('Eid',
-        //             style: TextStyle(
-        //                 color: Colors.white,
-        //                 fontSize: 18
-        //             ),
-        //           ),
-        //         ],
-        //       ),
-        //     ),
-        //   ],
-        // ),
+          //ProfileInfoList(),
+        Column(
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: 120,
+              height: 120,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                    image: NetworkImage('https://cdn2.iconfinder.com/data'
+                        '/icons/social-flat-buttons-3/512/anonymous-512.png'),
+                    fit: BoxFit.fill
+                ),
+              ),
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              margin: EdgeInsets.all(16),
+              child: Row(
+                children: [
+                  Text('First Name: ',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18
+                    ),
+                  ),
+
+                  Text('Eid',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
