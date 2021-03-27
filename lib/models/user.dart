@@ -23,8 +23,9 @@ class UserProfile {
   final String userName;
   final String email;
   final String dob;
+  final String profilePic;
 
   UserProfile({this.firstName, this.lastName,
-  this.userName, this.email, this.dob});
+  this.userName, this.email, this.dob, this.profilePic});
 }
 

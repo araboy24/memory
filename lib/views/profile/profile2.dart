@@ -6,6 +6,7 @@ import 'package:memory/views/profile/profile_info_list.dart';
 import 'package:provider/provider.dart';
 import 'package:memory/models/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:image_picker/image_picker.dart';
 
 class Profile2 extends StatefulWidget {
   @override
@@ -353,18 +354,23 @@ class _Profile2State extends State<Profile2> {
                   return
                     Column(
                       children: [
-                      Container(
-                            width: 120,
-                            height: 120,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                  image: NetworkImage('https://cdn2.iconfinder.com/data'
-                                      '/icons/social-flat-buttons-3/512/anonymous-512.png'),
-                                  fit: BoxFit.fill
+                      GestureDetector(
+                        onTap: () async {
+                          await ImagePicker.pickImage(source: ImageSource.gallery);
+                        },
+                        child: Container(
+                              width: 120,
+                              height: 120,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                    image: NetworkImage('https://cdn2.iconfinder.com/data'
+                                        '/icons/social-flat-buttons-3/512/anonymous-512.png'),
+                                    fit: BoxFit.fill
+                                ),
                               ),
                             ),
-                          ),
+                      ),
                         Container(
                           width: MediaQuery.of(context).size.width,
                           margin: EdgeInsets.all(16),

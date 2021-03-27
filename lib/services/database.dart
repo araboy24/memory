@@ -65,6 +65,7 @@ class DatabaseService{
         email: snaphot.data['email'] ?? '',
         userName: snaphot.data['userName'] ?? '',
         dob: snaphot.data['dob'] ?? '',
+        profilePic: snaphot.data['profilePic'] ?? '',
       );
   }
 
