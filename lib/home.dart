@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:memory/practice/camera_practice.dart';
+import 'package:memory/practice/camera_practice2.dart';
 import 'package:memory/services/auth.dart';
 import 'package:memory/views/activity.dart';
 import 'package:memory/views/profile/profile.dart';
@@ -146,6 +148,20 @@ class _HomeState extends State<Home> {
                 color: Colors.blueGrey,
                 padding: EdgeInsets.all(12),
                 child: Text('Go to Profile'),
+              ),
+            ),
+            SizedBox(height: 12,),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => CameraPractice2(),
+                    ));
+              },
+              child: Container(
+                color: Colors.blueGrey,
+                padding: EdgeInsets.all(12),
+                child: Text('Go to Camera Practice'),
               ),
             ),
           ],

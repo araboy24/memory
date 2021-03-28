@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:memory/models/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 
 class Profile2 extends StatefulWidget {
   @override
@@ -356,7 +357,8 @@ class _Profile2State extends State<Profile2> {
                       children: [
                       GestureDetector(
                         onTap: () async {
-                          await ImagePicker.pickImage(source: ImageSource.gallery);
+                          File image = await ImagePicker.pickImage(source: ImageSource.gallery);
+                          print(image.path);
                         },
                         child: Container(
                               width: 120,
