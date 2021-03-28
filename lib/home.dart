@@ -155,7 +155,7 @@ class _HomeState extends State<Home> {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(
-                      builder: (BuildContext context) => CameraPractice2(),
+                      builder: (BuildContext context) => CameraPractice(),
                     ));
               },
               child: Container(

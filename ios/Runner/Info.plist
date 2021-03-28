@@ -51,6 +51,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Used to add profile photo</string>
+	<key>NSFileProviderDomainUsageDescription</key>
+	<string>Used to get photo path</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Used to let user select profile photo</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Used to let user select profile photo</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
